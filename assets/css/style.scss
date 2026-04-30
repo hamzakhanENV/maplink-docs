@@ -24,6 +24,7 @@
    ============================================================ */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 *, *::before, *::after {
@@ -36,6 +37,7 @@ body {
   background: var(--white);
   padding-top: var(--nav-height);
   margin: 0;
+  overflow-x: hidden;
 }
 
 /* ============================================================
@@ -681,6 +683,31 @@ hr {
   }
 }
 
+@media (max-width: 480px) {
+  h1 { font-size: 1.25rem; }
+  h2 { font-size: 1.05rem; }
+  h3 { font-size: 0.95rem; }
+
+  .content-wrapper {
+    padding: 14px 12px;
+  }
+
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  pre {
+    font-size: 0.78rem;
+  }
+
+  .nav-logo img {
+    height: 30px;
+    width: 30px;
+  }
+}
+
 /* ============================================================
    VERSION / ANNOUNCEMENT BANNER
    ============================================================ */
@@ -1009,14 +1036,12 @@ hr {
 }
 
 .sidebar-link-wrapper {
-  display: flex;
-  align-items: center;
+  position: relative;
 }
 
 .sidebar-link {
-  flex: 1;
   display: block;
-  padding: 10px 18px;
+  padding: 10px 44px 10px 18px;
   color: rgba(255, 255, 255, 0.78);
   text-decoration: none;
   font-size: 0.8rem;
@@ -1035,21 +1060,20 @@ hr {
 
 .sidebar-link.sidebar-active {
   color: var(--dark);
-  background: transparent;
+  background: var(--green);
   border-left-color: var(--green-dark);
 }
 
-/* Green covers the full row including the chevron button */
-.sidebar-link-wrapper:has(.sidebar-link.sidebar-active) {
-  background: var(--green);
-}
-
 .sidebar-expand-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
   background: none;
   border: none;
   color: rgba(255, 255, 255, 0.4);
   cursor: pointer;
-  padding: 10px 14px 10px 4px;
+  padding: 0 14px;
   line-height: 1;
   transition: color 0.15s;
 }
@@ -1058,8 +1082,7 @@ hr {
   color: var(--green);
 }
 
-/* Active row chevron matches the dark text colour */
-.sidebar-link-wrapper:has(.sidebar-link.sidebar-active) .sidebar-expand-btn {
+.sidebar-link.sidebar-active + .sidebar-expand-btn {
   color: var(--dark);
 }
 
