@@ -41,7 +41,7 @@
 
     if (label === undefined) {
       // Format: hyphens → spaces, title case
-      label = seg.replace(/-/g, ' ').replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+      label = seg.replace(/\.html?$/i, '').replace(/-/g, ' ').replace(/\b\w/g, function (c) { return c.toUpperCase(); });
     }
 
     crumbs.push({ label: label, url: builtPath });
