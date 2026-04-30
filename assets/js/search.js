@@ -64,7 +64,7 @@
         var page = pagesData.find(function (p) { return p.url === result.ref; });
         if (!page) return;
         var title = highlight(page.title, query);
-        var excerpt = page.content ? page.content.replace(/\s+/g, ' ').substring(0, 110) + '&hellip;' : '';
+        var excerpt = page.content ? cleanMarkdown(page.content).substring(0, 110) + '&hellip;' : '';
         html += '<a class="search-result-item" href="' + page.url + '" tabindex="-1">';
         html += '<h4>' + title + '</h4>';
         html += '<p>' + excerpt + '</p>';
@@ -138,9 +138,28 @@
 
   function highlight(text, query) {
     if (!text) return '';
-    var escaped = escapeHtml(text);
+    var decoded = decodeHtml(text);
+    var escaped = escapeHtml(decoded);
     var safe = escapeRegex(query);
     return escaped.replace(new RegExp('(' + safe + ')', 'gi'), '<em>$1</em>');
+  }
+
+  function cleanMarkdown(text) {
+    return text
+      .replace(/#{1,6}\s*/g, '')
+      .replace(/\*{1,2}([^*]*)\*{1,2}/g, '$1')
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+      .replace(/\{:[^}]*\}/g, '')
+      .replace(/`[^`]*`/g, '')
+      .replace(/^>\s*/gm, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  function decodeHtml(str) {
+    var el = document.createElement('textarea');
+    el.innerHTML = str;
+    return el.value;
   }
 
   function escapeHtml(str) {
