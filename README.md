@@ -49,7 +49,7 @@ MapLink Pro has APIs for [C++](./api/cpp/) and [.Net](./api/dotnet/) and can be 
 
 ---
 
-## Developer Site — UI Change Log
+## Developer Site: UI Change Log
 
 This section documents UI and structural changes made to the developer site for auditing purposes. Content changes to markdown pages are tracked via git history.
 

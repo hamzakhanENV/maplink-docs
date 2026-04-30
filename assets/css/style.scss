@@ -1035,8 +1035,13 @@ hr {
 
 .sidebar-link.sidebar-active {
   color: var(--dark);
-  background: var(--green);
+  background: transparent;
   border-left-color: var(--green-dark);
+}
+
+/* Green covers the full row including the chevron button */
+.sidebar-link-wrapper:has(.sidebar-link.sidebar-active) {
+  background: var(--green);
 }
 
 .sidebar-expand-btn {
@@ -1051,6 +1056,11 @@ hr {
 
 .sidebar-expand-btn:hover {
   color: var(--green);
+}
+
+/* Active row chevron matches the dark text colour */
+.sidebar-link-wrapper:has(.sidebar-link.sidebar-active) .sidebar-expand-btn {
+  color: var(--dark);
 }
 
 .sidebar-chevron {
@@ -1176,5 +1186,9 @@ hr {
 @media (max-width: 960px) {
   .mobile-search-item {
     display: block;
+  }
+
+  .sidebar-toggle {
+    display: none;
   }
 }
