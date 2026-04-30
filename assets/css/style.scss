@@ -309,14 +309,6 @@ body > .wrapper > section {
   font-style: normal;
 }
 
-.search-result-item p {
-  font-size: 0.78rem;
-  color: #666;
-  margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
 .search-no-results {
   padding: 20px;
@@ -1189,9 +1181,6 @@ hr {
   color: rgba(255, 255, 255, 0.9);
 }
 
-.search-results-mobile .search-result-item p {
-  color: rgba(255, 255, 255, 0.45);
-}
 
 .search-results-mobile .search-no-results {
   color: rgba(255, 255, 255, 0.45);

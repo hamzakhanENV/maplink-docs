@@ -64,10 +64,8 @@
         var page = pagesData.find(function (p) { return p.url === result.ref; });
         if (!page) return;
         var title = highlight(page.title, query);
-        var excerpt = page.content ? cleanMarkdown(page.content).substring(0, 110) + '&hellip;' : '';
         html += '<a class="search-result-item" href="' + page.url + '" tabindex="-1">';
         html += '<h4>' + title + '</h4>';
-        html += '<p>' + excerpt + '</p>';
         html += '</a>';
       });
       resultsEl.innerHTML = html;
