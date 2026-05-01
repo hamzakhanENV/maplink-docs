@@ -1,7 +1,5 @@
 # MapLink Pro Support
 
-* toc
-{:toc}
 
 **[Create a technical support ticket](https://support.envitia.com) (Requires an active maintenance & support contract)**
 

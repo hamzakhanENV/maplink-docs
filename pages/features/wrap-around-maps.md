@@ -1,7 +1,5 @@
 # Wrap-around Maps
 
-* toc
-{:toc}
 
 Introduced in [MapLink Pro 11.2.1](../releases/11.2.1/release-notes).
 

@@ -1,7 +1,5 @@
 # Deployment of a MapLink Pro-Based Application
 
-* toc
-{:toc}
 
 # Licences
 Please see the [Licences Page](../../licences/) for licence information and required copyright statements.

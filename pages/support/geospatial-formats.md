@@ -1,7 +1,5 @@
 # Geospatial & Mapping Format Support
 
-* toc
-{:toc}
 
 This page summarises the geospatial file formats supported by MapLink Pro. The product is flexible and configurable so that it can be extended to support any format. Therefore, if your format is not listed, please contact us at **[https://support.envitia.com](https://support.envitia.com) (Requires an active maintenance & support contract)**.
 

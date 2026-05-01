@@ -1,7 +1,5 @@
 # Operating Systems
 
-* toc
-{:toc}
 
 For the time being, MapLink Pro releases are targeting Windows and Linux operating systems. The next MapLink for Android release will follow, but users can continue to use MapLink 10.2 on Android.
 

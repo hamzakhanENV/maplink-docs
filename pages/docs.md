@@ -1,7 +1,5 @@
 # MapLink Pro Documents
 
-* toc
-{:toc}
 
 ## Quick Start Guides
 

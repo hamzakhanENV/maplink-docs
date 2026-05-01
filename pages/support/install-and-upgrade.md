@@ -1,9 +1,6 @@
 # Installing MapLink
 
-* toc
-{:toc}
-
-> **MapLink Pro 11: The next major release of MapLink Pro is now available. MapLink Pro 8.x has now entered support and maintenance end-of-life. [Please contact us to discuss how to bring your systems up-to-date](https://forms.office.com/e/6ydUswfjEe).**
+> **MapLink Pro 11: The next major release of MapLink Pro is now available. MapLink Pro 8.x has now entered support and maintenance end-of-life. [Please contact us to discuss how to bring your systems up-to-date](https://forms.office.com/e/Lr7jN9TCC0).**
 
 There are structural differences between 11.1 and previous versions of MapLink Pro. This page explains how to upgrade your application to MapLink Pro 11.1 and above.
 
