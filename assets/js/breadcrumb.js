@@ -17,17 +17,18 @@
 
   // Map URL segments to display names; null = skip the segment entirely
   var nameMap = {
-    'pages':    null,
-    'support':  'Support',
-    'releases': 'Releases',
-    'features': 'Features',
-    'tutorials':'Tutorials',
-    'api':      'API Docs',
-    'cpp':      'C++',
-    'dotnet':   '.NET',
-    'licences': 'Licences',
-    'studio':   'Studio',
-    'pdf':      'Documents',
+    'pages':       null,
+    'support':     'Support',
+    'releases':    'Releases',
+    'features':    'Features',
+    'tutorials':   'Tutorials',
+    'api':         'API Docs',
+    'cpp':         'C++',
+    'dotnet':      '.NET',
+    'licences':    'Licences',
+    'studio':      'Studio',
+    'pdf':         'Documents',
+    'sdk-support': 'SDK Support',
   };
 
   var crumbs = [{ label: 'Home', url: base + '/' }];
@@ -42,6 +43,7 @@
     if (label === undefined) {
       // Format: hyphens → spaces, title case
       label = decodeURIComponent(seg).replace(/\.html?$/i, '').replace(/-/g, ' ').replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+      label = label.replace(/\bSdk\b/g, 'SDK').replace(/\bSdks\b/g, 'SDKs');
     }
 
     crumbs.push({ label: label, url: builtPath });

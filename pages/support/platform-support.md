@@ -5,7 +5,7 @@ For the time being, MapLink Pro releases are targeting Windows and Linux operati
 
 The following table lists the operating systems that the MapLink release has been tested on. 
 
-# Supported Operating Systems
+## Supported Operating Systems
 
 | Supported OS | OS Versions | Tested MapLink Version |
 | ----- | ----- | ----- |
@@ -14,7 +14,7 @@ The following table lists the operating systems that the MapLink release has bee
 | Linux: RHEL | 8 | 11.2 |
 | Android | - | 10.2 |
 
-# MapLink 11 Compilers
+## MapLink 11 Compilers
 
 MapLink Pro 11.1+ is built with these components:
 
@@ -24,6 +24,6 @@ MapLink Pro 11.1+ is built with these components:
 | Windows | MSVC | v143 (VS2022) |
 |  |  | .NET Framework 4.8 |
 
-# C++ Version
+## C++ Version
 The MapLink Pro C++ API is C++ 03 compliant to ensure maximum compatibility.
 On Windows and Linux, the minimum required version is C++17 to ensure compatibility with latest third party dependencies. 
