@@ -2,6 +2,10 @@
   var container = document.getElementById('breadcrumb');
   if (!container) return;
 
+  function esc(str) {
+    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
   var base = (typeof siteBaseUrl !== 'undefined' ? siteBaseUrl : '').replace(/\/$/, '');
   var path = window.location.pathname;
 
@@ -55,9 +59,9 @@
   crumbs.forEach(function (crumb, i) {
     var isLast = i === crumbs.length - 1;
     if (isLast) {
-      html += '<span class="bc-current">' + crumb.label + '</span>';
+      html += '<span class="bc-current">' + esc(crumb.label) + '</span>';
     } else {
-      html += '<a href="' + crumb.url + '">' + crumb.label + '</a>';
+      html += '<a href="' + esc(crumb.url) + '">' + esc(crumb.label) + '</a>';
       html += '<span class="bc-sep">›</span>';
     }
   });
