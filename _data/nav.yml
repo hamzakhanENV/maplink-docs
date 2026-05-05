@@ -30,9 +30,9 @@ pages:
     - title: MapLink 11.2 (Latest)
       url: /pages/releases/11.2/11.2.7
     - title: All 11.x Releases
-      url: /pages/releases/#releases-11
+      url: /pages/releases/#maplink-pro-11-releases
     - title: All 10.x Releases
-      url: /pages/releases/#releases-10
+      url: /pages/releases/#maplink-pro-10-releases
 
 - title: SUPPORT
   url: /pages/support/

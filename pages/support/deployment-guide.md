@@ -195,7 +195,7 @@ Where:
 
 ## Windows Deployed Libraries
 
-See: [Windows Deployed Libraries](./windows-deployed-libs)
+See: [Windows Deployed Libraries](./windows-libs)
 
 ## Linux Deployed Libraries
 
